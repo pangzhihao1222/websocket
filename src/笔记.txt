@@ -1,0 +1,9 @@
+执行顺序：
+connect：
+HandshakeInterceptor ：beforeHandshake -> afterHandshake
+ChannelInterceptor : preSend -> postSend -> afterSendCompletion   //这个过程不止有一次
+ConnectEventListener
+SubscribeEventListener
+
+disconnect:
+ChannelInterceptor : preSend -> postSend -> afterSendCompletion   //这个过程不止有一次
